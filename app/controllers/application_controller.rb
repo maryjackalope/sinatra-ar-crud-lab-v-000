@@ -5,7 +5,7 @@ require_relative '../../config/environment'
     set :views, 'app/views'	  
   end	
   
-   get '/' do	  get '/posts/new' do #loads new form
+   get '/posts/new' do #loads new form
      erb :new
   end	  end
 end	
