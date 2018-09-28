@@ -7,8 +7,8 @@ require_relative '../../config/environment'
   
    get '/posts/new' do #loads new form
      erb :new
-  end	  end
-end	
+  end	  
+  
   post '/posts' do  #creates a post
     @post = Post.create(params)
     redirect to '/posts'
