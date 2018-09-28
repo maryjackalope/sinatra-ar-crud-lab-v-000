@@ -5,19 +5,19 @@ require_relative '../../config/environment'
     set :views, 'app/views'	  
   end	
   
-   get '/posts/new' do #loads new form
+   get '/posts/new' do 
      erb :new
   end	  
   
-  post '/posts' do  #creates a post
+  post '/posts' do 
     @post = Post.create(params)
     redirect to '/posts'
   end
-   get '/posts' do #loads index page
+   get '/posts' do 
     @posts = Post.all
     erb :index
   end
-   get '/posts/:id' do  #loads show page
+   get '/posts/:id' do  
     @post = Post.find_by_id(params[:id])
     erb :show
   end
@@ -26,7 +26,7 @@ require_relative '../../config/environment'
     erb :edit
   end 
   
-  patch '/posts/:id' do  #updates a post
+  patch '/posts/:id' do  
     @post = Post.find_by_id(params[:id])
     @post.name = params[:name]
     @post.content = params[:content]
