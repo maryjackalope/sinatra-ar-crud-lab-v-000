@@ -3,7 +3,8 @@ require_relative '../../config/environment'
    configure do	  
     set :public_folder, 'public'	    
     set :views, 'app/views'	  
-  end	  
+  end	
+  
    get '/' do	  get '/posts/new' do #loads new form
      erb :new
   end	  end
